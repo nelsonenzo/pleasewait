@@ -14,8 +14,15 @@ Naturally, this is not useful for testing if you have concerns around your datab
 ## Usage
 ```sh
 docker run -it -p 80:4567 nelsonenzo/pleasewait
-curl localhost/5000
 
-## expect to return this text in 5 seconds (+ travel time, naturally).
-5 seconds
+## Testing - each curl will return in X number of milliseconds, and return a string with seconds waited.
+curl localhost/wait/500
+> 0.5 seconds
+
+curl localhost/wait/5000
+> 5.0 seconds
+
+curl localhost/wait/1500
+> 1.5 seconds
+
 ```
