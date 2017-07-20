@@ -1,5 +1,5 @@
 ## Please Wait
-A tiny application for making you wait.
+A tiny application for making you wait.  What were you expecting?
 
 #### Why would I use this stupid thing?
 As a sys admin, sometimes you want to simulate how a system works (such as a kubernetes cluster) when under duress, 
@@ -34,7 +34,7 @@ curl localhost/wait/1500
 ```
 #### Are there tests?
 The only government witness I like to be is a hostile witness, so I will answer every question with a question.
-Did you write tests for this thing?  No?  Than you wouldn't say there are tests written for it, wouldy you?
+Did you write tests for it?  No?  Than you wouldn't say there are tests written for it, would you?
 
 
 
