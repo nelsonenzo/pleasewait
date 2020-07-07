@@ -3,9 +3,21 @@ require 'sinatra'
 require 'resolv'
 
 set :bind, '0.0.0.0'
+set :service, ENV['service'] || 'pleasewait'
 
 get '/' do
-  'Hello world!'
+  "<pre>
+  Hello world!
+  service name: #{settings.service}
+  Routes:
+  /service - returns just the service name
+  /wait/:waittime - waits N milliseconds
+  /dig/:addr - resolve an address from within this service
+  </pre>"
+end
+
+get '/service' do
+  settings.service
 end
 
 get '/wait/:waittime' do |waittime|
