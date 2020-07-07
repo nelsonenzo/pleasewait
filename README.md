@@ -32,6 +32,15 @@ curl localhost/wait/1500
 > 1.5 seconds
 
 ```
+
+#### Setting the Service name
+You can set an ENV var "service" to define a service name. The default is "pleasewait"
+```
+docker run -it -p 80:4567 -e service=my_api_service nelsonenzo/pleasewait
+
+curl localhost/service
+> my_api_service
+```
 #### Are there tests?
 The only government witness I like to be is a hostile witness, so I will answer every question with a question.
 Did you write tests for it?  No?  Than you wouldn't say there are tests written for it, would you?
